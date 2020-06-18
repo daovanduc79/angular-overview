@@ -11,6 +11,7 @@ export class CalculatorComponent implements OnInit {
   public numberTwo: number;
   public result: number;
   public operator = '+';
+  public background = '#00e067';
 
   constructor() { }
 
@@ -24,6 +25,11 @@ export class CalculatorComponent implements OnInit {
 
   onSelectChange(value: string) {
     this.operator = value;
+  }
+
+  onChangeBackground(value: string)
+  {
+    this.background = value;
   }
 
   calculate() {
