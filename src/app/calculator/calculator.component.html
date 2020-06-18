@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Calculator</h2>
+    <div class="form-group">
+        <label>Number one</label>
+        <input class="form-control" type="number" [value]="numberOne" (change)="onChangeNumberOne($event.target.value)">
+    </div>
+    <div class="form-group">
+        <label>Operator</label>
+        <select class="form-control" [value]="operator" (change)="onSelectChange($event.target.value)">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Number two</label>
+        <input class="form-control" type="number" [value]="numberTwo" (change)="onChangeNumberTwo($event.target.value)">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="calculate()">Calculate</button>
+    </div>
+    <div class="form-group">
+        <label>Result</label>
+        <textarea class="form-control" rows="3">{{result}}</textarea>
+    </div>
+</div>
